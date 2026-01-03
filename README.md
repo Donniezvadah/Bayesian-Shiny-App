@@ -1127,20 +1127,20 @@ For out-of-sample evaluation, one commonly uses approximate leave-one-out cross-
 
 ### Importance sampling
 
-If \(\theta^{(s)}\sim g(\theta)\) for a proposal density \(g\), then
+If $\theta^{(s)}\sim g(\theta)$ for a proposal density $g$, then
 
-\[
+$$
 \mathbb{E}[f(\theta)\mid y] = \frac{\int f(\theta)\,\tilde\pi(\theta)\,d\theta}{\int \tilde\pi(\theta)\,d\theta}
 \approx
 \frac{\sum_s f(\theta^{(s)})w_s}{\sum_s w_s},
 \qquad w_s=\frac{\tilde\pi(\theta^{(s)})}{g(\theta^{(s)})},
-\]
+$$
 
-where \(\tilde\pi\) is an unnormalised posterior. Importance sampling suffers in high dimensions unless \(g\) closely matches the target.
+where $\tilde\pi$ is an unnormalised posterior. Importance sampling suffers in high dimensions unless $g$ closely matches the target.
 
 ### Sequential Monte Carlo (SMC)
 
-SMC methods propagate a weighted particle approximation through a sequence of distributions (e.g., tempered posteriors), resampling to avoid weight degeneracy. SMC is particularly useful for multimodal targets and for estimating normalising constants \(p(y)\).
+SMC methods propagate a weighted particle approximation through a sequence of distributions (e.g., tempered posteriors), resampling to avoid weight degeneracy. SMC is particularly useful for multimodal targets and for estimating normalising constants $p(y)$.
 
 ### Variational inference (VI)
 
@@ -1157,11 +1157,11 @@ The app UI contains an “MCMC Simulations” tab with controls (iterations, bur
 ## Implemented (server-side)
 
 - **Binomial tab**
-  - Discrete \(\theta\) grid prior update.
-  - Beta conjugate update with \(\alpha' = \alpha + x\), \(\beta' = \beta + n - x\).
+  - Discrete $\theta$ grid prior update.
+  - Beta conjugate update with $\alpha' = \alpha + x$, $\beta' = \beta + n - x$.
   - Prior/posterior plotting and credible interval plotting.
 - **Poisson tab**
-  - Gamma conjugate update with \(\alpha' = \alpha + S\), \(\beta' = \beta + n\), where \(\alpha,\beta\) are derived from (mean, sd).
+  - Gamma conjugate update with $\alpha' = \alpha + S$, $\beta' = \beta + n$, where $\alpha,\beta$ are derived from (mean, sd).
   - Discrete grid prior update.
   - Prior/posterior plotting and a 95% interval plot.
 
