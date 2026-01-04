@@ -2,7 +2,7 @@
 
 
 
-# Interactive Bayesian Inference Explorer (Shiny)
+# Bayesian Inference Mathematics Tutorial 
 
 This repository contains a Shiny application for interactively exploring Bayesian inference in canonical one-parameter models. The purpose is not merely to “compute a posterior”, but to expose (i) **the algebraic structure of Bayes’ rule**, (ii) **conjugacy as an identity of kernels**, and (iii) the way in which priors act as **regularisers / pseudo-data**.
 

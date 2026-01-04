@@ -1,0 +1,263 @@
+
+
+\documentclass[final]{beamer}
+
+% ====================
+% Packages
+% ====================
+
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[orientation=portrait,size=a0,scale=1.0]{beamerposter}
+\usetheme{gemini}
+\usecolortheme{nott}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.14}
+\usepackage{anyfontsize}
+
+% ====================
+% Lengths
+% ====================
+
+% If you have N columns, choose \sepwidth and \colwidth such that
+% (N+1)*\sepwidth + N*\colwidth = \paperwidth
+\newlength{\sepwidth}
+\newlength{\colwidth}
+\setlength{\sepwidth}{0.025\paperwidth}
+\setlength{\colwidth}{0.45\paperwidth}
+
+\newcommand{\separatorcolumn}{\begin{column}{\sepwidth}\end{column}}
+
+% ====================
+% Title
+% ====================
+
+\title{Inferring Crop Pests and Diseases from Imagery Soil Data and Properties}
+
+\author{Bruno Ssekiwere \inst{1} \and Ssekiwere Bruno \inst{2} \and Bruno S. \inst{2}}
+
+\institute[shortinst]{\inst{1} Deep Learning IndabaX Uganda \samelineand \inst{2} IndabaX Uganda}
+
+% ====================
+% Footer (optional)
+% ====================
+
+\footercontent{
+  \href{https://indabaxug.github.io}{Deep Learning IndabaX Uganda} \hfill
+  Deep Learning Indaba Conference, Accra --- Ghana \hfill
+  \href{mailto:bruno@deeplearningindaba.com}{bruno@deeplearningindaba.com}}
+% (can be left out to remove footer)
+
+
+% ====================
+% Logo (optional)
+% ====================
+
+% use this to include logos on the left and/or right side of the header:
+\logoright{\includegraphics[height=7cm]{logos/INDABA-X 2-1.jpg}}
+\logoleft{\includegraphics[height=7cm]{logos/logo.png}}
+
+% ====================
+% Body
+% ====================
+
+\begin{document}
+
+% \addtobeamertemplate{headline}{}
+% {
+%     \begin{tikzpicture}[remember picture,overlay]
+%       \node [anchor=north west, inner sep=3cm] at ([xshift=-2.5cm,yshift=1.75cm]current page.north west)
+%       {\includegraphics[height=7cm]{logos/unott-logo.eps}}; 
+%     \end{tikzpicture}
+% }
+
+\begin{frame}[t]
+\begin{columns}[t]
+\separatorcolumn
+
+\begin{column}{\colwidth}
+
+  \begin{block}{A block title}
+
+    Some block contents, followed by a diagram, followed by a dummy paragraph.
+
+    \begin{figure}
+      \centering
+      \begin{tikzpicture}[scale=6]
+        \draw[step=0.25cm,color=gray] (-1,-1) grid (1,1);
+        \draw (1,0) -- (0.2,0.2) -- (0,1) -- (-0.2,0.2) -- (-1,0)
+          -- (-0.2,-0.2) -- (0,-1) -- (0.2,-0.2) -- cycle;
+      \end{tikzpicture}
+      \caption{A figure caption.}
+    \end{figure}
+
+ Paragraph of text about the figure above can go here:The Deep Learning Indaba is the annual meeting of the African machine learning and AI community with the mission to Strengthen African AI. In 2023, the Indaba and Africa’s artificial intelligence community will meet for a week-long event of learning, research, exchange, ideation, and debate around the state of the art in machine learning and artificial intelligence in Accra Ghana from the 3rd to the 9th September.
+
+
+
+  \end{block}
+
+  \begin{block}{A block containing a list}
+
+The Deep Learning Indaba 2023 will be held in Accra, Ghana from the 3rd to the 9th September 2023 with the theme of Yɛbɛtumi, an Akan (Twi) word meaning “we can”. This 6 day event promises ample opportunities for networking, learning, collaborating and sharing your work.
+
+    \begin{itemize}
+      \item \textbf{Keynote Talks} from thought leaders in the fields of ML/AI and Ethics
+      \item \textbf{Tutorials} Opportunities to acquire knowledge in our tutorial sessions
+      \item \textbf{Practical Sessions} Opportunities to learn skills in our practical (programming) sessions
+    \end{itemize}
+
+    This 6 day event promises ample opportunities for networking, learning, collaborating and sharing your work.
+  \end{block}
+
+  \begin{alertblock}{A highlighted block}
+
+    This block catches your eye, so \textbf{important stuff} should probably go
+    here.
+
+ Whether you are a student, an industry practitioner or academic faculty teaching machine learning, our intense programme offers plenty to keep you engaged. Featuring:
+
+    \begin{itemize}
+      \item \textbf{Menntorship }Sessions
+      \item \textbf{Research in Africa} A two days African Research Symposium
+      \item \textbf{Workshops:} Deep Dive Workshops on topics including NLP; AI in Healthcare; Reinforcement Learning; Machine learning at the Edge; AI Governance and Policy
+    \end{itemize}
+
+   Attendance is free for students (350 USD for industry and 150 USD for academic faculty.)
+
+  \end{alertblock}
+
+ \begin{block}{DLI Newsleter}
+
+    Sign-up to our newsletter, visit our website regularly and follow us on Twitter for regular updates on our progress, programmes, and opportunities.
+    
+
+    \begin{table}
+      \centering
+      \begin{tabular}{l r r c}
+        \toprule
+        \textbf{First column} & \textbf{Second column} & \textbf{Third column} & \textbf{Fourth} \\
+        \midrule
+        Foo & 13.37 & 384,394 & $\alpha$ \\
+        Bar & 2.17 & 1,392 & $\beta$ \\
+        Baz & 3.14 & 83,742 & $\delta$ \\
+        Qux & 7.59 & 974 & $\gamma$ \\
+        \bottomrule
+      \end{tabular}
+      \caption{A table caption.}
+    \end{table}
+
+The Deep Learning Indaba is an organisation whose mission is to Strengthen Machine Learning and Artificial Intelligence in Africa. We work towards the goal of Africans being not only observers and receivers of the ongoing advances in AI, but active shapers and owners of these technological advances.
+
+Much of the wider discourse at present is permeated with conversations around the 4th industrial revolution, the need for policies and interventions around changes to jobs and workplaces, the impacts of increasing automation in societies, of high-levels of global investment in AI and machine learning, and visions of AI-first organisations. What underlies these conversation is the ongoing and rapid advances being made in artificial intelligence. It is essential for Africans to become not just observers of the ongoing advances in AI, but active shapers and owners of these technological advances. It is for this reason that the Indaba was conceived. And for this reason it plays a unique and important role within our continent.
+
+  \end{block}
+
+\end{column}
+
+\separatorcolumn
+
+\begin{column}{\colwidth}
+
+  \begin{block}{A block containing an enumerated list}
+
+We execute our mission through three principal programmes: the annual Deep Learning Indaba, the IndabaX, and the Kambule and Maathai awards. These programmes aim to build a sustainable pan-African community of AI expertise, create local leadership in AI in every country across the continent, and recognise excellence in research and application of AI technologies, respectively.
+
+    \begin{enumerate}
+      \item \textbf{DLI Conference:}The Deep Learning Indaba the annual gathering of the African AI community. It consists of a week-long event of teaching, practical session and debate on the principles and practice of modern Artificial Intelligence. Participants are selected from across the African continent, and elsewhere, and are exposed to the world’s leaders in the area of AI, build networks for future research and innovation, and are given the opportunity to showcase their own work. Participants range from all levels, including undergraduate students, research students, lecturers and academic, industry professionals, startups, and policy developers.
+      \item \textbf{IndabaX Programme:}. The IndabaX builds local leadership in individual countries across our continent. We ask groups to run their own one-day Indaba and build the community of researchers and developers in their community. We support these IndabaX’s through small grants and organisational guidance.
+      \item \textbf{Awards:}The Kambule Doctoral Dissertation Award recognises excellence in research and and writing by a doctoral candidate at an African higher education institution. The Alele-Williams Masters Award recognises excellence by Masters degree candidates at African universities, in any area of computational and statistical sciences. The Maathai Impact Award recognises excellence in the application of machine learning to problems facing Africa and her people.​ 
+    \end{enumerate}
+
+  \end{block}
+
+  \begin{block}{What is an Indaba?}
+
+An indaba is a Zulu word for a gathering or meeting. Such meetings are held throughout southern Africa, and serve several functions: to listen and share news of members of the community, to discuss common interests and issues facing the community, and to give advice and coach others. This is one of many words we have, including an imbizo (in Xhosa), an intlanganiso, and a lekgotla (in Sesotho). And by other words in other parts of the continent, such as a baraza (in Kiswahili) in Kenya and Tanzania, and padare (in Shona) in Zimbabwe. And of course this connects us to community gatherings that are similarly held by cultures throughout the world.
+
+This spirit of coming together, of sharing and learning is one of the core values of our organisation, and hence, the best choice of name for it.
+
+    \begin{figure}
+      \centering
+      \begin{tikzpicture}
+        \begin{axis}[
+            scale only axis,
+            no markers,
+            domain=0:2*pi,
+            samples=100,
+            axis lines=center,
+            axis line style={-},
+            ticks=none]
+          \addplot[red] {sin(deg(x))};
+          \addplot[blue] {cos(deg(x))};
+        \end{axis}
+      \end{tikzpicture}
+      \caption{Another figure caption.}
+    \end{figure}
+
+  \end{block}
+
+  \begin{block}{Indaba Leadership}
+
+   The Indaba is lead by a steering group, the  \textit{Indaba Abantu}, that consists of Africans committed to our mission in countries across our continent and abroad. The  \textit{Indaba} is also supported by an Advisory Board, who are critical thinkers in machine learning, artificial intelligence and its impacts on the people and societies, and guide our thinking and planning.
+
+
+    \begin{itemize}
+      \item \textbf{We advance}  study, research and deployment of knowledge in the subjects of machine learning and artificial intelligence. This therefore includes other subject areas that are the foundation of these fields, such as
+        \begin{itemize}
+          \item statistics
+          \item mathematics
+          \item probability and computer science
+        \end{itemize}
+      \item \textbf{Computational Sciences:} operations research, genomics, computational biology, econometrics, computational neuroscience, cognitive science and computational psychology, computational finance, statistical physics, information theory, and logic.
+      \item \textbf{AI Ethics:} Of importance are the fields that help assess and consider the impacts of advanced technologies and the subjects of ethics, and philosophy are also important to our work.
+    \end{itemize}
+
+  \end{block}
+
+  
+  \begin{exampleblock}{A highlighted block containing some math}
+
+    A different kind of highlighted block.
+
+    $$
+    \int_{-\infty}^{\infty} e^{-x^2}\,dx = \sqrt{\pi}
+    $$
+
+    A Deep Learning IndabaX $\{1, 4, 9, \ldots\}$ is a locally-organised Indaba that helps spread knowledge and builds capacity in machine learning and artificial intelligence in individual countries across Africa..
+
+    \heading{A heading inside a block}
+
+   The IndabaX programme started  ,i $x^2 + y^2$ in 2018 as an experiment in strengthening our machine learning community $\mathbf{u}^\intercal\mathbf{v}$ beyond the annual Deep Learning Indaba.
+
+    \heading{Another heading inside a block}
+
+    to allow more people to contribute to the conversation on artificial intelligence and machine learning $P(y \mid x)$ and machine learning. $\nabla_x P(y \mid x)$ We join hands across our beautiful continent. The initiative continues in 2023, and it is YOUR initiative!
+
+  \end{exampleblock}
+
+ 
+
+  \begin{block}{References}
+[1]	Patricia S. Abril and Robert Plant, 2007. The patent holder's dilemma: Buy, sell, or troll? Commun. ACM 50, 1 (Jan, 2007), 36-44. DOI: https://doi.org/10.1145/1188913.1188915.
+
+[2]	Sten Andler. 1979. Predicate path expressions. In \textit{Proceedings of the 6th. ACM SIGACT-SIGPLAN Symposium on Principles of Programming Languages (POPL '79)}. ACM Press, New York, NY, 226-236. DOI:https://doi.org/10.1145/567752.567774
+
+
+    \nocite{*}
+    \footnotesize{\bibliographystyle{plain}\bibliography{poster}}
+
+  \end{block}
+
+\end{column}
+\separatorcolumn
+
+
+
+\end{columns}
+\end{frame}
+
+\end{document}
