@@ -2,7 +2,10 @@
 .Rhistory
 .RData
 .Ruserdata
-.Bayesian_Methods.tex
-.poster.tex
+
+# LaTeX files
+Bayesian_Methods.tex
+poster.tex
+
 
 
